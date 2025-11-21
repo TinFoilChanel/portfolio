@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DevPortfolio</title>
+    <style>
+        background-color: #F0EAD6;
+    </style>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+  <div class="container">
+    <h1>Hello, Welcome to My Portfolio<h1>
+    <p>This is my portfolio. It describes personal details about myself and some of my past projects. My contact info is below. Enjoy!!</p>
+    <p>Email: dveasley@memphis.edu</p>
+    <p>GitHub: <a href="https://github.com/TinFoilChanel">dveasley</a></p>
+    <nav>
+    <%= link_to 'About', about_path %> |
+    <%= link_to 'Projects', work_path %> |
+    </nav>
+  </div>
+    <%= yield %>
+  </body>
+</html>
